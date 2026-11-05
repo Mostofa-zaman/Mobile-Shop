@@ -8,7 +8,7 @@ import React, { useState } from 'react'
   HiX,
   HiDeviceMobile,
 } from "react-icons/hi";
-import NavDrawer from './NavDrawer';
+// import NavDrawer from './NavDrawer'; 
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -79,7 +79,7 @@ const Navbar = () => {
       </div>
 
     {/* Slide-over Drawer Menu */}
-      <NavDrawer isOpen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)} />
+      {/* <NavDrawer isOpen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)} /> */}
     </nav>
   );
 };

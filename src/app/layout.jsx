@@ -1,5 +1,12 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/layouts/Navbar";
+import Footer from "@/components/layouts/Footer";
+import ScrollToTop from "@/components/common/ScrollToTop";
+import TopHeader from "@/components/layouts/TopHeader";
+
+import "aos/dist/aos.css";
+import AosInit from "@/components/motion/Aoslint";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,7 +29,21 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+   <body className=" ">
+    <TopHeader/>
+        {/* Navbar */}
+        <Navbar />
+
+        {/* Main Page Content */}
+        <main>{children}</main>
+
+        {/* Footer */}
+        <Footer />
+
+        {/* Global Scroll To Top Button */}
+        <ScrollToTop />
+        <AosInit/>
+      </body>
     </html>
   );
 }
