@@ -1,11 +1,12 @@
-import Header from "@/components/layouts/Header";
-import Navbar from "@/components/layouts/Navbar";
+import HeroSection from "@/components/home/Hero";
+
 
 
 export default function Home() {
   return (
   <>
- <h1>hello</h1>
+ <HeroSection />
+
   </>
   );
 }
