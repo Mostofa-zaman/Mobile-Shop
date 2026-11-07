@@ -1,13 +1,8 @@
-
 "use client";
 
 import React, { useState } from "react";
-import {
-  HiChevronDown,
-  HiMenu,
-  HiX,
-  HiDeviceMobile,
-} from "react-icons/hi";
+import Link from "next/link";
+import { HiChevronDown, HiMenu, HiX, HiDeviceMobile } from "react-icons/hi";
 import NavDrawer from "./NavDrawer";
 import Container from "../common/Container";
 
@@ -15,55 +10,35 @@ const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <nav className="w-full bg-[#1C1D1D] text-white py-4 shadow-lg">
+    <nav className="absolute  w-full z-50 bg-transparent text-white py-4">
       <Container className="flex items-center justify-between">
-
+        
         {/* Left Side: Brand Logo */}
-        <div className="flex items-center gap-2 cursor-pointer">
-          <HiDeviceMobile className="text-3xl text-white stroke-1" />
-          <span className="text-2xl font-bold tracking-tight text-white">
-            ÜPhone
-          </span>
-        </div>
+        <Link href="/" className="flex items-center gap-2 cursor-pointer">
+          <HiDeviceMobile className="text-3xl" />
+          <span className="text-2xl font-bold tracking-tight">ÜPhone</span>
+        </Link>
 
         {/* Center: Navigation Links (Desktop) */}
         <div className="hidden md:flex items-center gap-8 font-medium text-sm text-gray-200">
-          <a href="#home" className="hover:text-white transition-colors">
-            Home
-          </a>
+          <Link href="/" className="hover:text-white transition-colors">Home</Link>
 
           {/* Services Dropdown */}
           <div className="relative group cursor-pointer flex items-center gap-1 hover:text-white transition-colors">
             <span>Services</span>
             <HiChevronDown className="text-base transition-transform group-hover:rotate-180" />
 
-            <div className="absolute z-50 top-full left-0 mt-2 w-48 bg-[#2B2B2A] rounded-md shadow-xl py-2 hidden group-hover:block border border-gray-700">
-              <a href="#service1" className="block px-4 py-2 hover:bg-gray-700 text-sm">
-                Screen Repair
-              </a>
-              <a href="#service2" className="block px-4 py-2 hover:bg-gray-700 text-sm">
-                Battery Replacement
-              </a>
-              <a href="#service3" className="block px-4 py-2 hover:bg-gray-700 text-sm">
-                Charging Port Repair
-              </a>
-              <a href="#service4" className="block px-4 py-2 hover:bg-gray-700 text-sm">
-                Water Damage Repair
-              </a>
+            <div className="absolute z-50 top-full left-0 mt-1.5 w-48 bg-[#2B2B2A] rounded-md shadow-xl py-2 border border-gray-700 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 ease-in-out text-gray-200">
+              <Link href="/services/screen-repair" className="block px-4 py-2 hover:bg-gray-700 text-sm">Screen Repair</Link>
+              <Link href="/service/battery-replacement" className="block px-4 py-2 hover:bg-gray-700 text-sm">Battery Replacement</Link>
+              <Link href="/service/charging-port-repair" className="block px-4 py-2 hover:bg-gray-700 text-sm">Charging Port Repair</Link>
+              <Link href="/service/water-damage-repair" className="block px-4 py-2 hover:bg-gray-700 text-sm">Water Damage Repair</Link>
             </div>
           </div>
 
-          <a href="#book-repair" className="hover:text-white transition-colors">
-            Book a Repair
-          </a>
-
-          <a href="#blog" className="hover:text-white transition-colors">
-            Blog
-          </a>
-
-          <a href="#contact" className="hover:text-white transition-colors">
-            Contact
-          </a>
+          <Link href="/#book-repair" className="hover:text-white transition-colors">Book a Repair</Link>
+          <Link href="/#blog" className="hover:text-white transition-colors">Blog</Link>
+          <Link href="/#contact" className="hover:text-white transition-colors">Contact</Link>
         </div>
 
         {/* Right Side: Hamburger Icon */}

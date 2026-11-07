@@ -8,7 +8,7 @@ import Container from "@/components/common/Container";
 
 const TopHeader = () => {
   return (
-    <header className="w-full bg-[#2B2B2A] text-white py-3 shadow-md">
+    <header className="w-full bg-[#2B2B2A] text-white py-1 shadow-md">
       <Container className="flex flex-col lg:flex-row items-center justify-between gap-4 text-sm font-normal">
 
         {/* Left Side: Locations & Operating Hours */}

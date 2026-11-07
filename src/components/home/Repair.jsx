@@ -104,7 +104,7 @@ export default function Repair() {
         </div>
 
         {/* Repair Cards */}
-        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2">
           {repairs.map((repair) => (
             <RepairCard
               key={repair.id}
