@@ -1,10 +1,11 @@
 
+import React from "react";
 import Link from "next/link";
 import Container from "./Container";
 
 export default function Breadcrumb({ items = [] }) {
   return (
-    <div className="absolute bottom-0 left-0 w-full backdrop-blur-sm border-t border-gray-800 py-3 text-xs md:text-sm text-gray-400 z-10">
+    <div className="absolute bottom-0 left-0 w-full backdrop-blur-sm border-t border-b-gray-400 py-3 text-xs md:text-sm text-gray-400 z-10">
       <Container className="flex items-center justify-center gap-2">
         <Link href="/" className="hover:text-white transition-colors">
           Home
