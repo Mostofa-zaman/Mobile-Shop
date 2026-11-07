@@ -3,7 +3,7 @@ import Container from "../common/Container";
 
 export default function HeroSection() {
   return (
-    <section className="relative w-full min-h-[500px] md:min-h-[300px] bg-black text-white flex flex-col justify-between overflow-hidden">
+    <section className="relative w-full min-h-[500px] md:min-h-[300px] bg-gray-400 text-white flex flex-col justify-between overflow-hidden">
 
       {/* Blurred Background Overlay */}
       <div
