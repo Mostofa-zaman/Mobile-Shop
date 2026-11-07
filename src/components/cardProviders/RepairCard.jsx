@@ -1,12 +1,18 @@
+
 export default function RepairCard({
   title = "Screen Repair",
   description = "Replacing the display screen of an electronic device, such as a smartphone, tablet, laptop, or television.",
   time = "30 min",
   imageUrl = "https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=800&auto=format&fit=crop",
+  aosAnimation = "fade-up",
+  aosDelay = 0,
 }) {
   return (
-    <div className="group flex w-full max-w-sm flex-col overflow-hidden rounded-b-3xl bg-black shadow-2xl">
-
+    <div
+      data-aos={aosAnimation}
+      data-aos-delay={aosDelay}
+      className="group flex w-full max-w-sm flex-col overflow-hidden rounded-b-3xl bg-black shadow-2xl"
+    >
       {/* Image Section */}
       <div className="relative h-64 w-full overflow-hidden">
         <img

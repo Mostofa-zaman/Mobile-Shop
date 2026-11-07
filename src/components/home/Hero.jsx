@@ -1,3 +1,6 @@
+
+import Container from "../common/Container";
+
 export default function HeroSection() {
   return (
     <section className="relative w-full min-h-[500px] md:min-h-[300px] bg-black text-white flex flex-col justify-between overflow-hidden">
@@ -14,7 +17,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/90 pointer-events-none" />
 
       {/* Hero Content */}
-      <div className="relative z-10 max-w-7xl mx-auto w-full pt-16 md:pt-24 px-4 flex flex-col items-center text-center">
+      <Container className="relative z-10 flex flex-col items-center text-center pt-16 md:pt-24">
         <div className="flex items-center gap-3 mb-8">
           <span className="w-12 h-[2px] bg-white/80 inline-block" />
 
@@ -22,7 +25,7 @@ export default function HeroSection() {
             WELCOME TO ÜPHONE
           </span>
         </div>
-      </div>
+      </Container>
 
       {/* Bottom Phone Lineup */}
       <div className="relative z-10 w-full flex justify-center items-end mt-auto pt-6 overflow-hidden">

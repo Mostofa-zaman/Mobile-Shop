@@ -1,14 +1,16 @@
-import React from 'react';
-import { HiOutlineLocationMarker, HiOutlineClock } from 'react-icons/hi';
-import { FaFacebookF, FaInstagram } from 'react-icons/fa';
-import { RiTwitterXFill } from 'react-icons/ri';
-import Button from "@/components/common/Button"
+
+import React from "react";
+import { HiOutlineLocationMarker, HiOutlineClock } from "react-icons/hi";
+import { FaFacebookF, FaInstagram } from "react-icons/fa";
+import { RiTwitterXFill } from "react-icons/ri";
+import Button from "@/components/common/Button";
+import Container from "@/components/common/Container";
 
 const TopHeader = () => {
   return (
-    <header className="w-full bg-[#2B2B2A] text-white py-3 px-4 md:px-8 shadow-md">
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-4 text-sm font-normal">
-        
+    <header className="w-full bg-[#2B2B2A] text-white py-3 shadow-md">
+      <Container className="flex flex-col lg:flex-row items-center justify-between gap-4 text-sm font-normal">
+
         {/* Left Side: Locations & Operating Hours */}
         <div className="flex flex-wrap items-center justify-center lg:justify-start gap-6">
           {/* Location 1 */}
@@ -33,12 +35,13 @@ const TopHeader = () => {
         {/* Right Side: CTA Button & Social Icons */}
         <div className="flex items-center gap-6">
           {/* Book a Repair Button */}
-          <Button 
-            children="Book a Repair" 
-            bgColor="bg-[#FFD700]" 
-            textColor="text-black" 
-            hoverBgColor="hover:bg-[#e6c200]" 
+          <Button
+            children="Book a Repair"
+            bgColor="bg-[#FFD700]"
+            textColor="text-black"
+            hoverBgColor="hover:bg-[#e6c200]"
           />
+
           {/* Social Icons */}
           <div className="flex items-center gap-4 text-white">
             <a
@@ -50,6 +53,7 @@ const TopHeader = () => {
             >
               <FaFacebookF className="text-base" />
             </a>
+
             <a
               href="https://x.com"
               target="_blank"
@@ -59,6 +63,7 @@ const TopHeader = () => {
             >
               <RiTwitterXFill className="text-base" />
             </a>
+
             <a
               href="https://instagram.com"
               target="_blank"
@@ -71,7 +76,7 @@ const TopHeader = () => {
           </div>
         </div>
 
-      </div>
+      </Container>
     </header>
   );
 };

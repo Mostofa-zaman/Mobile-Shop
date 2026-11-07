@@ -29,8 +29,8 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-   <body className=" ">
-    <TopHeader/>
+      <body className=" ">
+        <TopHeader />
         {/* Navbar */}
         <Navbar />
 
@@ -42,7 +42,7 @@ export default function RootLayout({ children }) {
 
         {/* Global Scroll To Top Button */}
         <ScrollToTop />
-        <AosInit/>
+        <AosInit />
       </body>
     </html>
   );
