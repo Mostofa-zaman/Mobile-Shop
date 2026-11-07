@@ -66,6 +66,15 @@ const ServicesGrid = () => {
     <section className="bg-[#211e1e]">
       <Container>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0">
+          {servicesData.map((service) => (
+            <ServiceCard
+              key={service.id}
+              id={service.id}
+              title={service.title}
+              description={service.description}
+              imageSrc={service.imageSrc}
+            />
+          ))}
         </div>
       </Container>
     </section>
