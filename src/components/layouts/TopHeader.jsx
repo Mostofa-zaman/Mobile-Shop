@@ -16,13 +16,13 @@ const TopHeader = () => {
           {/* Location 1 */}
           <div className="flex items-center gap-2 hover:text-gray-300 cursor-pointer transition-colors">
             <HiOutlineLocationMarker className="text-base flex-shrink-0" />
-            <span>Humble, TX</span>
+            <span>Mirpur, Dhaka</span>
           </div>
 
           {/* Location 2 */}
           <div className="flex items-center gap-2 hover:text-gray-300 cursor-pointer transition-colors">
             <HiOutlineLocationMarker className="text-base flex-shrink-0" />
-            <span>Conroe, TX</span>
+            <span>Dhanmondi, Dhaka</span>
           </div>
 
           {/* Opening Hours */}

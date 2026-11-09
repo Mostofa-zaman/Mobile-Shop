@@ -6,7 +6,7 @@ const SectionHeading = ({
   className = "" 
 }) => {
   return (
-    <h2 className={`text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-tight ${align} ${className}`}>
+    <h2 className={`text-3xl md:text-5xl lg:text-3xl font-bold tracking-tight text-white leading-snug ${align} ${className}`}>
       {title}
     </h2>
   );

@@ -2,6 +2,7 @@ import Container from "../common/Container";
 import SectionTitle from "../common/SectionTitle";
 import SectionHeading from "../common/SectionHeading";
 import RepairCard from "../cardProviders/RepairCard";
+import AosInit from "../motion/Aoslint";
 
 const repairs = [
   {
@@ -9,70 +10,70 @@ const repairs = [
     title: "Screen Repair",
     description: "Replacing the display screen of an electronic device.",
     time: "30 min",
-    imageUrl: "/images/screen-repair.jpg",
+    imageUrl: "/images/SR1.png",
     aosAnimation: "fade-right",
     aosDelay: 0,
   },
   {
     id: 2,
     title: "Battery Replacement",
-    description: "Replacing damaged or weak batteries with new ones.",
+    description: "Over time, batteries can degrade, leading to decreased performance, reduced battery life, even complete failure.",
     time: "20 min",
-    imageUrl: "/images/battery-repair.jpg",
+    imageUrl: "/images/BR1.png",
     aosAnimation: "fade-right",
     aosDelay: 150,
   },
   {
     id: 3,
-    title: "Charging Port Repair",
-    description: "Fixing charging port issues and connection problems.",
+    title: "Water Damage Repair",
+    description: "It can be particularly detrimental to electronic components, corrosion, short circuits, and other issues.",
     time: "25 min",
-    imageUrl: "/images/charging-port.jpg",
+    imageUrl: "/images/WDR1.png",
     aosAnimation: "fade-right",
     aosDelay: 300,
   },
   {
     id: 4,
-    title: "Water Damage Repair",
-    description: "Repairing devices affected by water or liquid damage.",
+    title: "Data Recovery",
+    description: "Retrieving or restoring inaccessible, lost, corrupted, or accidentally deleted data from storage.",
     time: "45 min",
-    imageUrl: "/images/water-damage.jpg",
+    imageUrl: "/images/CPR1.png",
     aosAnimation: "fade-right",
     aosDelay: 450,
   },
   {
     id: 5,
-    title: "Software Repair",
-    description: "Fixing software errors, bugs, and system issues.",
-    time: "30 min",
-    imageUrl: "/images/software-repair.jpg",
+    title: "Charging Port Repair",
+    description: "Over time, charging ports can become damaged or wear out due to frequent use, which can lead to issues.",
+    time: "1 hour",
+    imageUrl: "/images/CR1.webp",
     aosAnimation: "fade-left",
     aosDelay: 0,
   },
   {
     id: 6,
     title: "Camera Repair",
-    description: "Repairing faulty cameras and camera-related issues.",
-    time: "35 min",
-    imageUrl: "/images/camera-repair.jpg",
+    description: "Complex board-level repairs for logic boards and motherboards. Estimated 2-3 days.",
+    time: "1-3 days",
+    imageUrl: "/images/MR2.webp",
     aosAnimation: "fade-left",
     aosDelay: 150,
   },
   {
     id: 7,
-    title: "Speaker Repair",
-    description: "Fixing speaker sound issues and audio problems.",
+    title: "Ps5 / X box Repair",
+    description: "Expert repair and upgrades for PS5, Xbox, and other gaming consoles, including RAM upgrades and more.",
     time: "25 min",
-    imageUrl: "/images/speaker-repair.jpg",
+    imageUrl: "/images/XBR1.png",
     aosAnimation: "fade-left",
     aosDelay: 300,
   },
   {
     id: 8,
-    title: "Button Repair",
-    description: "Repairing damaged or unresponsive device buttons.",
-    time: "20 min",
-    imageUrl: "/images/button-repair.jpg",
+    title: "Virus/Malware Removal",
+    description: "Viruses, malware, and other types of malicious software can compromise the security and functionality of a system.",
+    time: "450 min",
+    imageUrl: "/images/VR1.png",
     aosAnimation: "fade-left",
     aosDelay: 450,
   },
@@ -104,7 +105,7 @@ export default function Repair() {
         </div>
 
         {/* Repair Cards */}
-        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2">
+        <div className="mt-8 grid grid-cols-1 gap-5 sm:mt-10 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4">
           {repairs.map((repair) => (
             <RepairCard
               key={repair.id}
@@ -117,6 +118,7 @@ export default function Repair() {
             />
           ))}
         </div>
+        <AosInit />
       </Container>
     </section>
   );
