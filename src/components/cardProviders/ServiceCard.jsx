@@ -3,9 +3,20 @@ import Image from "next/image";
 import Link from "next/link";
 import { HiPlus } from "react-icons/hi";
 
-const ServiceCard = ({ id, title, description, imageSrc, bgColor, slug }) => {
+const ServiceCard = ({
+  id,
+  title,
+  description,
+  imageSrc,
+  bgColor,
+  slug,
+  aosAnimation = "fade-up",
+  aosDelay = 0,
+}) => {
   return (
     <div
+      data-aos={aosAnimation}
+      data-aos-delay={aosDelay}
       className={`${bgColor} p-6 flex flex-col justify-between transition-all`}
     >
       <div>
@@ -29,7 +40,6 @@ const ServiceCard = ({ id, title, description, imageSrc, bgColor, slug }) => {
         </p>
       </div>
 
-      {/* Hover Expandable Read More Button */}
       <Link
         href={`/services/${slug || "screen-repair"}`}
         aria-label="Read more"
