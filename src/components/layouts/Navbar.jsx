@@ -30,7 +30,7 @@ const Navbar = () => {
 
             <div className="absolute z-50 top-full left-0 mt-1.5 w-48 bg-[#2B2B2A] rounded-md shadow-xl py-2 border border-gray-700 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 ease-in-out text-gray-200">
               <Link href="/services/screen-repair" className="block px-4 py-2 hover:bg-gray-700 text-sm">Screen Repair</Link>
-              <Link href="/service/battery-replacement" className="block px-4 py-2 hover:bg-gray-700 text-sm">Battery Replacement</Link>
+              <Link href="/services/battery-replacement" className="block px-4 py-2 hover:bg-gray-700 text-sm">Battery Replacement</Link>
               <Link href="/service/charging-port-repair" className="block px-4 py-2 hover:bg-gray-700 text-sm">Charging Port Repair</Link>
               <Link href="/service/water-damage-repair" className="block px-4 py-2 hover:bg-gray-700 text-sm">Water Damage Repair</Link>
             </div>

@@ -1,3 +1,4 @@
+
 import ServiceCard from "@/components/cardProviders/ServiceCard";
 import Container from "@/components/common/Container";
 import React from "react";
@@ -61,11 +62,11 @@ const servicesData = [
   },
 ];
 
-const ServicesGrid = () => {
+export default function ServicesGrid() {
   return (
     <section className="bg-[#211e1e] overflow-hidden">
       <Container>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0 mb-10">
           {servicesData.map((service, index) => (
             <ServiceCard
               key={service.id}
@@ -84,6 +85,4 @@ const ServicesGrid = () => {
       </Container>
     </section>
   );
-};
-
-export default ServicesGrid;
+}
