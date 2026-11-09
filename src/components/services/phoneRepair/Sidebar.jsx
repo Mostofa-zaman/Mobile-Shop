@@ -1,6 +1,7 @@
 import React from 'react';
 import { Smartphone, Tablet, Laptop, Gamepad, Watch, Code, Star } from 'lucide-react';
 import Container from "@/components/common/Container"
+import BatteryRepairTestimonialCard from '@/components/cardProviders/BatteryRepairTestimonialCard';
 export default function Sidebar() {
   const menuItems = [
     { name: 'Phone Repair', icon: Smartphone, active: true },
@@ -39,7 +40,7 @@ export default function Sidebar() {
         })}
       </nav>
 
-   
+
    
     </aside>
    </Container>
