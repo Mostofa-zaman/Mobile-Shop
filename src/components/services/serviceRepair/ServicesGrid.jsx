@@ -63,7 +63,7 @@ const servicesData = [
 
 const ServicesGrid = () => {
   return (
-    <section className="bg-[#211e1e]">
+    <section className="bg-[#211e1e] overflow-hidden">
       <Container>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0">
           {servicesData.map((service, index) => (
@@ -76,6 +76,8 @@ const ServicesGrid = () => {
               bgColor={
                 index % 2 === 0 ? "bg-[#211e1e]" : "bg-[#1F262B]"
               }
+              aosAnimation={index < 4 ? "fade-right" : "fade-left"}
+              aosDelay={index * 200}
             />
           ))}
         </div>
