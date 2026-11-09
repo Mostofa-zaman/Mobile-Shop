@@ -1,6 +1,8 @@
 
 import PostCard from "../cardProviders/PostCard";
 import Container from "../common/Container";
+import SectionHeading from "../common/SectionHeading";
+import SectionTitle from "../common/SectionTitle";
 
 const posts = [
   {
@@ -49,15 +51,10 @@ export default function LatestPosts() {
       {/* Section Heading */}
       <div className="mb-8 text-center">
         <div className="mb-5 flex items-center justify-center gap-3">
-          <span className="h-[2px] w-16 bg-[#8b999a]" />
-          <span className="text-sm font-bold tracking-[2px] text-white">
-            LATEST POST
-          </span>
+         <SectionTitle title="LATEST POST" />
         </div>
 
-        <h2 className="text-2xl font-bold text-white sm:text-3xl md:text-[42px]">
-          Stay update with us
-        </h2>
+       <SectionHeading title="Stay updated with us" />
       </div>
 
       {/* Posts Grid */}
