@@ -4,6 +4,8 @@ import Navbar from "@/components/layouts/Navbar";
 import Footer from "@/components/layouts/Footer";
 import ScrollToTop from "@/components/common/ScrollToTop";
 import TopHeader from "@/components/layouts/TopHeader";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 import "aos/dist/aos.css";
 import AosInit from "@/components/motion/Aoslint";
