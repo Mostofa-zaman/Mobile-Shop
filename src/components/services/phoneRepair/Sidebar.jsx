@@ -107,7 +107,19 @@ export default function Sidebar() {
             })}
           </nav>
 
-          
+          <div className="w-full ">
+            <Slider {...settings}>
+              {reviews.map((review, index) => (
+                <div key={index}>
+                  <BatteryRepairTestimonialCard
+                    name={review.name}
+                    image={review.image}
+                    review={review.review}
+                  />
+                </div>
+              ))}
+            </Slider>
+          </div>
         </aside>
       </Container>
     </section>
