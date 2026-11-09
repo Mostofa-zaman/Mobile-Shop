@@ -16,7 +16,7 @@ const Navbar = () => {
         {/* Left Side: Brand Logo */}
         <Link href="/" className="flex items-center gap-2 cursor-pointer">
           <HiDeviceMobile className="text-3xl" />
-          <span className="text-2xl font-bold tracking-tight">ÜPhone</span>
+          <span className="text-2xl font-bold tracking-tight">JÜloonPhoneShop</span>
         </Link>
 
         {/* Center: Navigation Links (Desktop) */}
