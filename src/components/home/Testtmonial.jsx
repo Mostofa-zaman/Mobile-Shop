@@ -3,6 +3,8 @@
 
 import Container from "@/components/common/Container";
 import ReviewCard from "../cardProviders/ReviewCard";
+import SectionTitle from "../common/SectionTitle";
+import SectionHeading from "../common/SectionHeading";
 
 // Customer Reviews Data
 const reviews = [
@@ -49,17 +51,11 @@ export default function Testimonial() {
         <div className="py-8 sm:py-10 lg:py-12">
 
           <div className="mb-5 flex items-center justify-center gap-3">
-            <span className="h-px w-12 bg-gray-400"></span>
-
-            <span className="text-center text-sm font-bold tracking-widest text-gray-200">
-              TESTIMONIALS
-            </span>
+           <SectionTitle title = "TESTIMONIALS" />
           </div>
 
           <div className="text-center">
-            <h2 className="mx-auto mb-6 max-w-xl text-3xl font-bold leading-tight sm:text-5xl">
-              Our Happy Customers
-            </h2>
+           <SectionHeading title="Our Happy Customers" />
           </div>
 
         </div>

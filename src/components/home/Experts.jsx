@@ -43,7 +43,7 @@ export default function Experts() {
         </div>
 
         {/* Right Video Section */}
-        <div className="relative w-full min-w-0 lg:w-[calc(100%+((100vw-1440px)/2)+4rem)]">
+       <div className="relative w-full min-w-0 lg:w-[calc(100%+max(0px,(100vw-1440px)/2)+4rem)]">
 
           <div className="relative h-[260px] w-full overflow-hidden rounded-bl-[36px] bg-black sm:h-[380px] sm:rounded-bl-[50px] md:h-[420px] lg:h-[400px] lg:rounded-bl-[60px] xl:h-[450px] 2xl:h-[480px]">
 

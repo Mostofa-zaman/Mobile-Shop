@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import SectionTitle from "../common/SectionTitle";
+import SectionHeading from "../common/SectionHeading";
 
 const faqData = [
   {
@@ -79,16 +81,11 @@ export default function FaqSection() {
 
               {/* Small Title */}
               <div className="mb-5 flex items-center gap-4">
-                <span className="h-[1px] w-14 bg-white" />
-                <span className="text-xs font-bold tracking-[3px] text-[#d8e66c]">
-                  QUESTIONS
-                </span>
+                <SectionTitle title="Questions" />
               </div>
 
               {/* Main Heading */}
-              <h2 className="mb-8 text-3xl font-bold leading-tight text-white sm:text-4xl xl:text-[44px]">
-                Frequently asked questions
-              </h2>
+              <SectionHeading title="Frequently asked questions" align="text-left" />
 
               {/* Questions */}
               <div className="w-full">
