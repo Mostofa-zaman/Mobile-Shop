@@ -8,9 +8,9 @@
         {/* Devices Banner */}
         <div className="relative h-[260px] w-full overflow-hidden rounded-xl bg-gray-200 sm:h-[350px] md:h-[420px] lg:h-[520px]">
             <img
-            src="https://images.unsplash.com/photo-1512499617640-c74ae3a79d37?w=1600&q=80"
+            src="/images/RepairHeroimage.png"
             alt="Devices Banner"
-            className="h-full w-full object-cover object-center"
+            className="h-full w-full object-contain  bg-white"
             />
         </div>
 
