@@ -1,10 +1,19 @@
+
 "use client";
+
 import React from "react";
 import Slider from "react-slick";
-import { Smartphone, Tablet, Laptop, Gamepad, Watch, Code } from "lucide-react";
+import {
+  Smartphone,
+  Tablet,
+  Laptop,
+  Gamepad,
+  Watch,
+  Code,
+} from "lucide-react";
 
-import Container from "@/components/common/Container";
 import BatteryRepairTestimonialCard from "@/components/cardProviders/BatteryRepairTestimonialCard";
+import SidebarCard from "@/components/cardProviders/SidebarCard";
 
 const reviews = [
   {
@@ -81,47 +90,55 @@ export default function Sidebar() {
   };
 
   return (
-    <section className="pt-16 pb-24">
-      <Container>
-        <aside className="w-full lg:w-1/4 space-y-6">
-          <nav className="space-y-4">
-            {menuItems.map((item, index) => {
-              const Icon = item.icon;
+    <section className="w-full">
+      <aside className="w-full space-y-6">
 
-              return (
-                <button
-                  key={index}
-                  className={`w-full flex items-center justify-between p-10 rounded transition ${
-                    item.active
-                      ? "bg-slate-900 text-white font-medium"
-                      : "bg-gray-200 text-gray-700 hover:bg-gray-300 font-medium"
-                  }`}
-                >
-                  <span className="flex items-center gap-3 text-sm">
-                    <Icon size={18} />
-                    {item.name}
-                  </span>
-                  <span className="text-xs">→</span>
-                </button>
-              );
-            })}
-          </nav>
+        {/* Repair Menu */}
+        <nav className="space-y-4">
+          {menuItems.map((item, index) => {
+            const Icon = item.icon;
 
-          <div className="w-full ">
-            <Slider {...settings}>
-              {reviews.map((review, index) => (
-                <div key={index}>
-                  <BatteryRepairTestimonialCard
-                    name={review.name}
-                    image={review.image}
-                    review={review.review}
-                  />
-                </div>
-              ))}
-            </Slider>
-          </div>
-        </aside>
-      </Container>
+            return (
+              <button
+                key={index}
+                className={`flex min-h-[76px] w-full items-center justify-between rounded-md px-4 py-5 transition sm:min-h-[88px] sm:px-5 ${
+                  item.active
+                    ? "bg-[#19292c] text-white"
+                    : "bg-[#d9e1e1] text-[#19292c] hover:bg-gray-300"
+                }`}
+              >
+                <span className="flex min-w-0 items-center gap-3 text-base font-medium sm:text-lg lg:text-xl">
+                  <Icon size={34} strokeWidth={1.5} className="shrink-0" />
+                  <span>{item.name}</span>
+                </span>
+
+                <span className="ml-2 shrink-0 text-xl">→</span>
+              </button>
+            );
+          })}
+        </nav>
+
+        {/* Testimonial Slider */}
+        <div className="w-full pb-8">
+          <Slider {...settings}>
+            {reviews.map((review, index) => (
+              <div key={index}>
+                <BatteryRepairTestimonialCard
+                  name={review.name}
+                  image={review.image}
+                  review={review.review}
+                />
+              </div>
+            ))}
+          </Slider>
+        </div>
+
+        {/* Sidebar Card */}
+        <div className="w-full">
+          <SidebarCard />
+        </div>
+
+      </aside>
     </section>
   );
 }
