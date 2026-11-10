@@ -6,10 +6,11 @@ import SingleRepairHero from "@/components/services/phoneRepair/SingleRepairHero
 import PhoneRepairHeroSection from "@/components/services/phoneRepair/PhoneRepairHeroSection";
 import RepaireGrid from "@/components/services/phoneRepair/RepaireGrid";
 import RepWhyChooseUs from "@/components/services/phoneRepair/RepWhyChooseUs";
+import RepairCTA from "@/components/services/serviceRepair/RepairCTA";
 
 export default function Page() {
   return (
-    <main className="min-h-screen pb-16">
+    <main className="min-h-screen ">
       {/* Hero Banner Section */}
       <SingleRepairHero />
 
@@ -26,9 +27,11 @@ export default function Page() {
             <PhoneRepairHeroSection/>
             <RepaireGrid/>
             <RepWhyChooseUs/>
+
           </div>
         </div>
       </Container>
+        <RepairCTA/>
     </main>
   );
 }

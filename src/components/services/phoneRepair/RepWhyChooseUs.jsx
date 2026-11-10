@@ -30,7 +30,7 @@ export default function RepWhyChooseUs() {
   ];
 
   return (
-    <section className="space-y-6 mt-15">
+    <section className="space-y-6 mt-15 mb-25">
       <div>
         <span className="text-xs font-bold text-gray-400 uppercase tracking-wider block mb-1">
           TOP REASONS
