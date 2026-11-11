@@ -1,4 +1,5 @@
-import BlogContent from "@/components/blogPage/BlogContent";
+
+import BlogContent from "@/components/blogPage/BlogContant";
 import BlogHero from "@/components/blogPage/BlogHero";
 
 
