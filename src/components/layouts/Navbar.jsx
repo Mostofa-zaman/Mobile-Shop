@@ -36,8 +36,8 @@ const Navbar = () => {
             </div>
           </div>
 
-          <Link href="/#book-repair" className="hover:text-white transition-colors">Book a Repair</Link>
-          <Link href="blog/#blog" className="hover:text-white transition-colors">Blog</Link>
+          <Link href="/book-repair" className="hover:text-white transition-colors">Book a Repair</Link>
+          <Link href="/blog" className="hover:text-white transition-colors">Blog</Link>
           <Link href="/#contact" className="hover:text-white transition-colors">Contact</Link>
         </div>
 
