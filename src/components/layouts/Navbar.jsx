@@ -38,7 +38,7 @@ const Navbar = () => {
 
           <Link href="/book-repair" className="hover:text-white transition-colors">Book a Repair</Link>
           <Link href="/blog" className="hover:text-white transition-colors">Blog</Link>
-          <Link href="/#contact" className="hover:text-white transition-colors">Contact</Link>
+          <Link href="/contact" className="hover:text-white transition-colors">Contact</Link>
         </div>
 
         {/* Right Side: Hamburger Icon */}
