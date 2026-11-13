@@ -6,12 +6,15 @@ export default function RepairCard({
   imageUrl = "https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=800&auto=format&fit=crop",
   aosAnimation = "fade-up",
   aosDelay = 0,
+  rounded = false,
 }) {
   return (
     <div
       data-aos={aosAnimation}
       data-aos-delay={aosDelay}
-      className="group flex w-full max-w-sm flex-col overflow-hidden rounded-b-3xl bg-black shadow-2xl"
+      className={`group flex w-full max-w-sm flex-col overflow-hidden bg-black shadow-2xl ${
+        rounded ? "rounded-3xl" : "rounded-b-3xl"
+      }`}
     >
       {/* Image Section */}
       <div className="relative h-64 w-full overflow-hidden">
@@ -35,7 +38,9 @@ export default function RepairCard({
       </div>
 
       {/* Content Section */}
-      <div className="flex flex-grow flex-col justify-between rounded-b-3xl bg-[#FFD700] p-8 text-black">
+      <div className={`flex flex-grow flex-col justify-between bg-[#FFD700] p-8 text-black ${
+        rounded ? "rounded-b-3xl" : "rounded-b-3xl"
+      }`}>
         <div>
           <h3 className="mb-4 text-2xl font-bold tracking-tight">
             {title}
