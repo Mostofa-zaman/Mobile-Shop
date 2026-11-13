@@ -79,10 +79,10 @@ const repairs = [
 
 export default function ProblemsCardsSection() {
   return (
-    <section className="w-full overflow-x-hidden bg-[#1C2326] py-16 text-white">
+    <section className="w-full overflow-x-hidden bg-white py-16 text-white">
       <Container>
         {/* Repair Cards */}
-        <div className="mt-8 rounded grid grid-cols-1 gap-5 sm:mt-10 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4 ">
+        <div className="mt-8 max-w-full rounded grid grid-cols-1 gap-5 sm:mt-10 sm:grid-cols-2 sm:gap-2 lg:grid-cols-4 ">
           {repairs.map((repair) => (
             <RepairCard
               key={repair.id}

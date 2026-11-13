@@ -12,9 +12,9 @@ export default function RepairCard({
     <div
       data-aos={aosAnimation}
       data-aos-delay={aosDelay}
-      className={`group flex w-full max-w-sm flex-col overflow-hidden bg-black shadow-2xl ${
-        rounded ? "rounded-3xl" : "rounded-b-3xl"
-      }`}
+     className={`group flex w-full max-w-md flex-col overflow-hidden bg-black shadow-2xl ${
+  rounded ? "rounded-3xl" : "rounded-b-3xl"
+}`}
     >
       {/* Image Section */}
       <div className="relative h-64 w-full overflow-hidden">
