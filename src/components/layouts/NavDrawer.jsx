@@ -53,87 +53,36 @@ const NavDrawer = ({ isOpen, onClose }) => {
           </div>
 
           {/* Our Services */}
-       <div className="grid grid-cols-3 gap-y-6 gap-x-2 text-center">
 
-  {/* Phone Repair */}
-  <Link
-    href="/services/single-repair"
-    className="flex flex-col items-center gap-2 group cursor-pointer"
-  >
-    <div className="w-14 h-14 rounded-xl border border-[#C5FF13]/40 flex items-center justify-center text-[#C5FF13] group-hover:bg-[#C5FF13]/10 transition-colors">
-      <HiDevicePhoneMobile className="text-2xl" />
-    </div>
-    <span className="text-xs font-medium text-gray-300">
-      Phone Repair
-    </span>
-  </Link>
+          <div className="grid grid-cols-3 gap-y-6 gap-x-2 text-center">
+            {[
+              { name: "Phone Repair", icon: HiDevicePhoneMobile },
+              { name: "Tablet Repair", icon: HiDeviceTablet },
+              { name: "Laptop Repair", icon: HiComputerDesktop },
+              { name: "PS5 / Xbox", icon: HiCpuChip },
+              { name: "Smartwatch", icon: HiOutlineClock },
+              { name: "Software Repair", icon: HiOutlineWrenchScrewdriver },
+            ].map((item) => {
+              const Icon = item.icon;
 
-  {/* Tablet Repair */}
-  <Link
-    href="/services/single-repair"
-    className="flex flex-col items-center gap-2 group cursor-pointer"
-  >
-    <div className="w-14 h-14 rounded-xl border border-[#C5FF13]/40 flex items-center justify-center text-[#C5FF13] group-hover:bg-[#C5FF13]/10 transition-colors">
-      <HiDeviceTablet className="text-2xl" />
-    </div>
-    <span className="text-xs font-medium text-gray-300">
-      Tablet Repair
-    </span>
-  </Link>
+              return (
+                <Link
+                  key={item.name}
+                  href={`/services/single-repair?category=${encodeURIComponent(item.name)}`}
+                  onClick={onClose}
+                  className="flex flex-col items-center gap-2 group"
+                >
+                  <div className="w-14 h-14 rounded-xl border border-[#C5FF13]/40 flex items-center justify-center text-[#C5FF13] group-hover:bg-[#C5FF13]/10 transition-colors">
+                    <Icon className="text-2xl" />
+                  </div>
 
-  {/* Laptop Repair */}
-  <Link
-    href="/services/single-repair"
-    className="flex flex-col items-center gap-2 group cursor-pointer"
-  >
-    <div className="w-14 h-14 rounded-xl border border-[#C5FF13]/40 flex items-center justify-center text-[#C5FF13] group-hover:bg-[#C5FF13]/10 transition-colors">
-      <HiComputerDesktop className="text-2xl" />
-    </div>
-    <span className="text-xs font-medium text-gray-300">
-      Laptop Repair
-    </span>
-  </Link>
-
-  {/* PS5 / Xbox */}
-  <Link
-    href="/services/single-repair"
-    className="flex flex-col items-center gap-2 group cursor-pointer"
-  >
-    <div className="w-14 h-14 rounded-xl border border-[#C5FF13]/40 flex items-center justify-center text-[#C5FF13] group-hover:bg-[#C5FF13]/10 transition-colors">
-      <HiCpuChip className="text-2xl" />
-    </div>
-    <span className="text-xs font-medium text-gray-300">
-      PS5 / Xbox
-    </span>
-  </Link>
-
-  {/* Smartwatch */}
-  <Link
-    href="/services/single-repair"
-    className="flex flex-col items-center gap-2 group cursor-pointer"
-  >
-    <div className="w-14 h-14 rounded-xl border border-[#C5FF13]/40 flex items-center justify-center text-[#C5FF13] group-hover:bg-[#C5FF13]/10 transition-colors">
-      <HiOutlineClock className="text-2xl" />
-    </div>
-    <span className="text-xs font-medium text-gray-300">
-      Smartwatch
-    </span>
-  </Link>
-
-  {/* Software Repair */}
-  <Link
-    href="/services/single-repair"
-    className="flex flex-col items-center gap-2 group cursor-pointer"
-  >
-    <div className="w-14 h-14 rounded-xl border border-[#C5FF13]/40 flex items-center justify-center text-[#C5FF13] group-hover:bg-[#C5FF13]/10 transition-colors">
-      <HiOutlineWrenchScrewdriver className="text-2xl" />
-    </div>
-    <span className="text-xs font-medium text-gray-300">
-      Software Repair
-    </span>
-  </Link>
-
-</div>
+                  <span className="text-xs font-medium text-gray-300">
+                    {item.name}
+                  </span>
+                </Link>
+              );
+            })}
+          </div>
 
           {/* Contact Us */}
           <div className="py-6 border-b border-gray-800 space-y-3 text-sm">

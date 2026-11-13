@@ -66,15 +66,15 @@ const reviews = [
   },
 ];
 
-export default function Sidebar() {
-  const menuItems = [
-    { name: "Phone Repair", icon: Smartphone, active: true },
-    { name: "Tablet Repair", icon: Tablet, active: false },
-    { name: "Laptop Repair", icon: Laptop, active: false },
-    { name: "PS5 / Xbox", icon: Gamepad, active: false },
-    { name: "Smartwatch", icon: Watch, active: false },
-    { name: "Software Repair", icon: Code, active: false },
-  ];
+export default function Sidebar({ selectedCategory, onCategoryChange }) {
+ const menuItems = [
+  { name: "Phone Repair", icon: Smartphone },
+  { name: "Tablet Repair", icon: Tablet },
+  { name: "Laptop Repair", icon: Laptop },
+  { name: "PS5 / Xbox", icon: Gamepad },
+  { name: "Smartwatch", icon: Watch },
+  { name: "Software Repair", icon: Code },
+];
 
   const settings = {
     dots: true,
@@ -99,21 +99,24 @@ export default function Sidebar() {
             const Icon = item.icon;
 
             return (
-              <button
-                key={index}
-                className={`flex min-h-[76px] w-full items-center justify-between rounded-md px-4 py-5 transition sm:min-h-[88px] sm:px-5 ${
-                  item.active
-                    ? "bg-[#19292c] text-white"
-                    : "bg-[#d9e1e1] text-[#19292c] hover:bg-gray-300"
-                }`}
-              >
-                <span className="flex min-w-0 items-center gap-3 text-base font-medium sm:text-lg lg:text-xl">
-                  <Icon size={34} strokeWidth={1.5} className="shrink-0" />
-                  <span>{item.name}</span>
-                </span>
+             
+<button
+  key={index}
+  onClick={() => onCategoryChange(item.name)}
+  className={`flex min-h-[76px] w-full items-center justify-between rounded-md px-4 py-5 transition sm:min-h-[88px] sm:px-5 ${
+    selectedCategory === item.name
+      ? "bg-[#19292c] text-white"
+      : "bg-[#d9e1e1] text-[#19292c] hover:bg-gray-300"
+  }`}
+>
+  <span className="flex min-w-0 items-center gap-3 text-base font-medium sm:text-lg lg:text-xl">
+    <Icon size={34} strokeWidth={1.5} className="shrink-0" />
+    <span>{item.name}</span>
+  </span>
 
-                <span className="ml-2 shrink-0 text-xl">→</span>
-              </button>
+  <span className="ml-2 shrink-0 text-xl">→</span>
+</button>
+
             );
           })}
         </nav>

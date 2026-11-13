@@ -5,7 +5,7 @@ export default function RepaireGrid() {
   return (
     <section className="mt-10 flex w-full min-w-0 flex-wrap items-center">
       {/* Box 1: Yellow Text Card */}
-      <div className="flex min-h-[220px] w-full flex-col justify-center bg-amber-400 p-6 sm:w-1/2 sm:p-8 lg:w-[280px]">
+      <div className="flex min-h-[220px] w-full flex-col justify-center bg-[#FFD700] p-6 sm:w-1/2 sm:p-8 lg:w-[280px]">
         <h3 className="mb-2 text-xl font-bold text-slate-900">
           Quality parts
         </h3>
