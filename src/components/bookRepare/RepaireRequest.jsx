@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Container from "../common/Container";
 import { MapPin, Clock3, ChevronDown, RefreshCw } from "lucide-react";
+import Breadcrumb from "../common/Breadcrumb";
 
 const gadgets = [
   "Mobile Phone",
@@ -190,6 +191,7 @@ export default function RepaireRequest() {
           </div>
         </div>
       </Container>
+      <Breadcrumb items={[{ label: "  Book a Repair" }]}/>
     </section>
   );
 }
