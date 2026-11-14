@@ -1,4 +1,3 @@
-
 "use client";
 
 import React, { useEffect, useState } from "react";
@@ -9,7 +8,9 @@ import Container from "../common/Container";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
+  // Scroll listener for mobile menu
   useEffect(() => {
     if (!isMobileMenuOpen) return;
 
@@ -38,8 +39,27 @@ const Navbar = () => {
     };
   }, [isMobileMenuOpen]);
 
+  // Scroll listener for Navbar background change
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <nav className="absolute w-full z-50 bg-transparent text-white py-4">
+    <nav
+      className={`fixed top-0 left-0 w-full z-50 text-white transition-all duration-300 ${
+        isScrolled
+          ? "bg-[#1a2224] shadow-lg py-4 " 
+          : "bg-transparent py-6 pt-16"        
+      }`}
+    >
       <Container className="flex items-center justify-between">
 
         {/* Left Side: Brand Logo */}

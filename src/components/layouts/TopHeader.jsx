@@ -8,32 +8,34 @@ import Container from "@/components/common/Container";
 
 const TopHeader = () => {
   return (
-    <header className="w-full bg-[#2B2B2A] text-white py-1 shadow-md">
-      <Container className="flex flex-col lg:flex-row items-center justify-between gap-4 text-sm font-normal">
+    <header className="w-full bg-[#2B2B2A] text-white py-2 shadow-md">
+      <Container className="flex flex-col lg:flex-row items-center justify-between gap-3 lg:gap-4 text-xs sm:text-sm font-normal">
 
         {/* Left Side: Locations & Operating Hours */}
-        <div className="flex flex-wrap items-center justify-center lg:justify-start gap-6">
+        <div className="flex flex-wrap items-center justify-center lg:justify-start gap-x-4 sm:gap-x-6 gap-y-2">
+
           {/* Location 1 */}
           <div className="flex items-center gap-2 hover:text-gray-300 cursor-pointer transition-colors">
-            <HiOutlineLocationMarker className="text-base flex-shrink-0" />
+            <HiOutlineLocationMarker className="text-base shrink-0" />
             <span>Mirpur, Dhaka</span>
           </div>
 
           {/* Location 2 */}
           <div className="flex items-center gap-2 hover:text-gray-300 cursor-pointer transition-colors">
-            <HiOutlineLocationMarker className="text-base flex-shrink-0" />
+            <HiOutlineLocationMarker className="text-base shrink-0" />
             <span>Dhanmondi, Dhaka</span>
           </div>
 
           {/* Opening Hours */}
-          <div className="flex items-center gap-2">
-            <HiOutlineClock className="text-base flex-shrink-0" />
+          <div className="flex items-center justify-center gap-2">
+            <HiOutlineClock className="text-base shrink-0" />
             <span>Mon-Sat 9am-8pm, Sun 11am-6pm</span>
           </div>
         </div>
 
         {/* Right Side: CTA Button & Social Icons */}
-        <div className="flex items-center gap-6">
+        <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-5 lg:gap-6">
+
           {/* Book a Repair Button */}
           <Button
             children="Book a Repair"
@@ -43,7 +45,8 @@ const TopHeader = () => {
           />
 
           {/* Social Icons */}
-          <div className="flex items-center gap-4 text-white">
+          <div className="flex items-center gap-3 sm:gap-4 text-white">
+
             <a
               href="https://facebook.com"
               target="_blank"
@@ -73,6 +76,7 @@ const TopHeader = () => {
             >
               <FaInstagram className="text-base" />
             </a>
+
           </div>
         </div>
 
