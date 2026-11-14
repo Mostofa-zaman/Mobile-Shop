@@ -81,7 +81,7 @@ const repairs = [
 
 export default function Repair() {
   return (
-    <section className="w-full overflow-x-hidden bg-[#1C2326] py-16 text-white">
+    <section className="w-full overflow-x-hidden bg-[#1C2326] py-12 text-white sm:py-16 lg:py-20">
       <Container>
         {/* Section Header */}
         <div className="flex flex-col items-center justify-center text-center">
@@ -94,18 +94,18 @@ export default function Repair() {
           <SectionHeading
             title={
               <>
-                Your one-stop solution for
-                <br />
+                Your one-stop solution for{" "}
+                <br className="hidden sm:inline" />
                 all gadget repair needs
               </>
             }
             align="text-center"
-            className="mb-4 mx-auto"
+            className="mb-4 mx-auto max-w-2xl text-2xl sm:text-3xl lg:text-4xl"
           />
         </div>
 
-        {/* Repair Cards */}
-        <div className="mt-8 grid grid-cols-1 gap-5 sm:mt-10 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4">
+        {/* Repair Cards Grid */}
+        <div className="mt-8 grid grid-cols-1 gap-6 sm:mt-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
           {repairs.map((repair) => (
             <RepairCard
               key={repair.id}
@@ -118,6 +118,7 @@ export default function Repair() {
             />
           ))}
         </div>
+
         <AosInit />
       </Container>
     </section>
