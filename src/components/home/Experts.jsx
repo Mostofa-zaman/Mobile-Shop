@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState } from "react";
@@ -11,22 +10,22 @@ export default function Experts() {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
 
   return (
-    <section className="w-full overflow-hidden bg-[#19282B] py-10 text-white sm:py-12 lg:py-16">
-      <Container className="grid grid-cols-1 items-center gap-8 sm:gap-10 lg:grid-cols-2 lg:gap-8 xl:gap-12">
+    <section className="w-full overflow-hidden bg-[#19282B] py-12 text-white sm:py-16 lg:py-20">
+      <Container className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-12 xl:gap-16">
 
         {/* Left Content */}
-        <div className="w-full px-0 sm:px-4 lg:px-0 lg:py-8 xl:pr-6">
+        <div className="w-full">
           <SectionTitle title="OUR EXPERTS" />
 
           <div className="mb-5 mt-3 sm:mb-6">
             <SectionHeading
               title="Trust our experts for reliable gadget solutions"
               align="text-left"
-              className="text-2xl sm:text-3xl lg:text-5xl"
+              className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl"
             />
           </div>
 
-          <p className="mb-7 max-w-lg text-sm leading-[1.85] text-gray-400 sm:text-base">
+          <p className="mb-7 max-w-lg text-sm leading-[1.85] text-gray-300 sm:text-base">
             Our team of expert technicians is dedicated to providing
             the highest quality repairs for all your gadgets. With years
             of hands-on experience and advanced certifications, our
@@ -43,9 +42,8 @@ export default function Experts() {
         </div>
 
         {/* Right Video Section */}
-       <div className="relative w-full min-w-0 lg:w-[calc(100%+max(0px,(100vw-1440px)/2)+4rem)]">
-
-          <div className="relative h-[260px] w-full overflow-hidden rounded-bl-[36px] bg-black sm:h-[380px] sm:rounded-bl-[50px] md:h-[420px] lg:h-[400px] lg:rounded-bl-[60px] xl:h-[450px] 2xl:h-[480px]">
+        <div className="w-full">
+          <div className="relative h-[250px] w-full overflow-hidden rounded-2xl bg-black sm:h-[350px] sm:rounded-[36px] md:h-[400px] lg:h-[380px] lg:rounded-bl-[50px] xl:h-[420px]">
 
             {isVideoOpen ? (
               /* YouTube Video */
@@ -64,7 +62,7 @@ export default function Experts() {
                   alt="Expert repairing a mobile phone"
                   fill
                   priority
-                  sizes="(max-width: 1024px) 100vw, 60vw"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover"
                 />
 
