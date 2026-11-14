@@ -12,7 +12,7 @@ const TopHeader = () => {
       <Container className="flex flex-col lg:flex-row items-center justify-between gap-3 lg:gap-4 text-xs sm:text-sm font-normal">
 
         {/* Left Side: Locations & Operating Hours */}
-        <div className="flex flex-wrap items-center justify-center lg:justify-start gap-x-4 sm:gap-x-6 gap-y-2">
+        <div className="w-full min-w-0 flex flex-wrap items-center justify-center lg:justify-start gap-x-4 sm:gap-x-6 gap-y-2">
 
           {/* Location 1 */}
           <div className="flex items-center gap-2 hover:text-gray-300 cursor-pointer transition-colors">
@@ -34,7 +34,7 @@ const TopHeader = () => {
         </div>
 
         {/* Right Side: CTA Button & Social Icons */}
-        <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-5 lg:gap-6">
+        <div className="hidden lg:flex shrink-0 items-center justify-center gap-3 sm:gap-5 lg:gap-6">
 
           {/* Book a Repair Button */}
           <Button
