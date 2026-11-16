@@ -1,6 +1,7 @@
-import Container from "../common/Container";
-import RepairCard from "../cardProviders/RepairCard";
-import AosInit from "../motion/Aoslint";
+import RepairCard from "@/components/cardProviders/RepairCard";
+import Container from "@/components/common/Container";
+import AosInit from "@/components/motion/Aoslint";
+
 
 const repairs = [
   {

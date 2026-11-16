@@ -3,6 +3,7 @@ import React from "react";
 import Container from "../common/Container";
 import SectionTitle from "@/components/common/SectionTitle";
 import SectionHeading from "../common/SectionHeading";
+import Breadcrumb from "../common/Breadcrumb";
 
 const steps = [
   {
@@ -122,6 +123,7 @@ export default function RepairService() {
 
         </div>
       </Container>
+       <Breadcrumb classNamw=' ' items={[{ label: "  Book a Repair" }]}/>
     </section>
   );
 }

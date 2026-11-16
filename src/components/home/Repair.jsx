@@ -95,7 +95,7 @@ export default function Repair() {
             title={
               <>
                 Your one-stop solution for{" "}
-                <br className="hidden sm:inline" />
+                {/* <br className="hidden sm:inline" /> */}
                 all gadget repair needs
               </>
             }

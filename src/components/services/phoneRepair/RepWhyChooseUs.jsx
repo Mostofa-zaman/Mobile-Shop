@@ -1,5 +1,6 @@
 import React from 'react';
 import { Check } from 'lucide-react';
+import Container from '@/components/common/Container';
 
 export default function RepWhyChooseUs() {
   const features = [
@@ -30,25 +31,27 @@ export default function RepWhyChooseUs() {
   ];
 
   return (
-    <section className="space-y-6 mt-15 mb-25">
+    <section className="space-y-6 mt-15 mb-25 ">
       <div>
         <span className="text-xs font-bold text-gray-400 uppercase tracking-wider block mb-1">
           TOP REASONS
         </span>
         <h2 className="text-2xl font-bold text-slate-900">Why Choose Us</h2>
       </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+<Container>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-10  ">
         {features.map((item, index) => (
           <div key={index} className="space-y-2">
             <div className="w-12 h-12 bg-amber-400 flex items-center justify-center rounded">
               <Check size={30} className="text-slate-900 stroke-[3]" />
             </div>
             <h4 className="font-bold text-[20px] text-slate-900">{item.title}</h4>
-            <p className="text-sm text-gray-500 leading-6 w-[220px]">{item.desc}</p>
+            <p className="text-sm text-gray-500 leading-6 ">{item.desc}</p>
           </div>
         ))}
       </div>
+      </Container>
     </section>
+    
   );
 }

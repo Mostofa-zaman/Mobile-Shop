@@ -1,8 +1,8 @@
+import Breadcrumb from "@/components/common/Breadcrumb";
+import Container from "@/components/common/Container";
+import SectionHeading from "@/components/common/SectionHeading";
+import SectionTitle from "@/components/common/SectionTitle";
 
-import Breadcrumb from "../common/Breadcrumb";
-import Container from "../common/Container";
-import SectionHeading from "../common/SectionHeading";
-import SectionTitle from "../common/SectionTitle";
 
 export default function ProblemsHero() {
   return (
