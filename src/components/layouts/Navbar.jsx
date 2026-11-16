@@ -2,12 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import {
-  HiChevronDown,
-  HiMenu,
-  HiMinus,
-  HiDeviceMobile,
-} from "react-icons/hi";
+import { HiChevronDown, HiMenu, HiMinus, HiDeviceMobile } from "react-icons/hi";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import NavDrawer from "./NavDrawer";
@@ -92,7 +87,10 @@ const Navbar = () => {
 
         {/* Center: Desktop Navigation Links (lg স্ক্রিন বা তার বেশি থেকে দেখাবে) */}
         <div className="hidden lg:flex items-center lg:gap-6 xl:gap-8 font-medium text-sm text-gray-200">
-          <Link href="/" className="hover:text-white transition-colors whitespace-nowrap">
+          <Link
+            href="/"
+            className="hover:text-white transition-colors whitespace-nowrap"
+          >
             Home
           </Link>
 
@@ -135,10 +133,16 @@ const Navbar = () => {
           >
             Book a Repair
           </Link>
-          <Link href="/blog" className="hover:text-white transition-colors whitespace-nowrap">
+          <Link
+            href="/blog"
+            className="hover:text-white transition-colors whitespace-nowrap"
+          >
             Blog
           </Link>
-          <Link href="/contact" className="hover:text-white transition-colors whitespace-nowrap">
+          <Link
+            href="/contact"
+            className="hover:text-white transition-colors whitespace-nowrap"
+          >
             Contact
           </Link>
         </div>
@@ -166,144 +170,149 @@ const Navbar = () => {
       </Container>
 
       {/* Mobile & Tablet Dropdown Menu (lg এর নিচে কাজ করবে) */}
+
       <div
-        className={`lg:hidden bg-[#1e2628] overflow-hidden transition-all duration-300 ease-in-out ${
+        className={`lg:hidden bg-[#1e2628] grid transition-[grid-template-rows,opacity] duration-500 ease-in-out ${
           isMobileMenuOpen
-            ? "max-h-[85vh] opacity-100 border-t border-white/10 shadow-2xl overflow-y-auto"
-            : "max-h-0 opacity-0"
+            ? "grid-rows-[1fr] opacity-100 border-t border-white/10 shadow-2xl"
+            : "grid-rows-[0fr] opacity-0"
         }`}
       >
-        <Container className="pt-2 pb-6 flex flex-col text-sm sm:text-base font-medium text-gray-200">
-          <Link
-            href="/"
-            onClick={closeMobileMenu}
-            className="py-3.5 border-b border-white/10 hover:text-white transition-colors"
-          >
-            Home
-          </Link>
-
-          {/* Mobile Services Accordion */}
-          <div className="border-b border-white/10">
-            <button
-              onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
-              className="w-full py-3.5 flex items-center justify-between hover:text-white transition-colors"
+        <div className="overflow-hidden">
+          <Container className="pt-2 pb-6 flex flex-col text-sm sm:text-base font-medium text-gray-200">
+            <Link
+              href="/"
+              onClick={closeMobileMenu}
+              className="py-3.5 border-b border-white/10 hover:text-white transition-colors"
             >
-              <span>Services</span>
-              <HiChevronDown
-                className={`text-lg text-gray-400 transition-transform duration-300 ${
-                  isMobileServicesOpen ? "rotate-180 text-white" : ""
+              Home
+            </Link>
+
+            {/* Mobile Services Accordion */}
+            <div className="border-b border-white/10">
+              <button
+                onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
+                className="w-full py-3.5 flex items-center justify-between hover:text-white transition-colors"
+              >
+                <span>Services</span>
+                <HiChevronDown
+                  className={`text-lg text-gray-400 transition-transform duration-300 ${
+                    isMobileServicesOpen ? "rotate-180 text-white" : ""
+                  }`}
+                />
+              </button>
+
+              <div
+                className={`overflow-hidden transition-all duration-300 flex flex-col pl-4 space-y-2.5 text-sm text-gray-300 ${
+                  isMobileServicesOpen ? "max-h-56 pb-3.5 pt-1" : "max-h-0"
                 }`}
-              />
-            </button>
+              >
+                <Link
+                  href="/services/screen-repair"
+                  onClick={closeMobileMenu}
+                  className="py-1 hover:text-white transition-colors"
+                >
+                  All Services
+                </Link>
 
-            <div
-              className={`overflow-hidden transition-all duration-300 flex flex-col pl-4 space-y-2.5 text-sm text-gray-300 ${
-                isMobileServicesOpen ? "max-h-56 pb-3.5 pt-1" : "max-h-0"
-              }`}
-            >
-              <Link
-                href="/services/screen-repair"
-                onClick={closeMobileMenu}
-                className="py-1 hover:text-white transition-colors"
-              >
-                All Services
-              </Link>
-              <Link
-                href="/services/single-repair"
-                onClick={closeMobileMenu}
-                className="py-1 hover:text-white transition-colors"
-              >
-                Single Repair
-              </Link>
-              <Link
-                href="/services/problems"
-                onClick={closeMobileMenu}
-                className="py-1 hover:text-white transition-colors"
-              >
-                Problems We Repair
-              </Link>
-              <Link
-                href="/service/water-damage-repair"
-                onClick={closeMobileMenu}
-                className="py-1 hover:text-white transition-colors"
-              >
-                Why Choose Us
-              </Link>
+                <Link
+                  href="/services/single-repair"
+                  onClick={closeMobileMenu}
+                  className="py-1 hover:text-white transition-colors"
+                >
+                  Single Repair
+                </Link>
+
+                <Link
+                  href="/services/problems"
+                  onClick={closeMobileMenu}
+                  className="py-1 hover:text-white transition-colors"
+                >
+                  Problems We Repair
+                </Link>
+
+                <Link
+                  href="/service/water-damage-repair"
+                  onClick={closeMobileMenu}
+                  className="py-1 hover:text-white transition-colors"
+                >
+                  Why Choose Us
+                </Link>
+              </div>
             </div>
-          </div>
 
-          <Link
-            href="/book-repair"
-            onClick={closeMobileMenu}
-            className="py-3.5 border-b border-white/10 hover:text-white transition-colors"
-          >
-            Book a Repair
-          </Link>
-
-          <Link
-            href="/blog"
-            onClick={closeMobileMenu}
-            className="py-3.5 border-b border-white/10 hover:text-white transition-colors"
-          >
-            Blog
-          </Link>
-
-          <Link
-            href="/contact"
-            onClick={closeMobileMenu}
-            className="py-3.5 border-b border-white/10 hover:text-white transition-colors"
-          >
-            Contact
-          </Link>
-
-          {/* মোবাইল ড্রপডাউনের ভেতরে Book a Repair বাটন এবং সোশ্যাল আইকন */}
-          <div className="mt-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
             <Link
               href="/book-repair"
               onClick={closeMobileMenu}
-              className="w-full sm:w-auto sm:px-8 bg-[#facc15] text-black font-semibold text-center py-3 rounded-full hover:bg-yellow-400 transition-colors"
+              className="py-3.5 border-b border-white/10 hover:text-white transition-colors"
             >
               Book a Repair
             </Link>
 
-            <div className="flex items-center justify-center gap-6 py-1 text-gray-300 text-lg">
-              <a
-                href="https://facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-white transition-colors"
-                aria-label="Facebook"
+            <Link
+              href="/blog"
+              onClick={closeMobileMenu}
+              className="py-3.5 border-b border-white/10 hover:text-white transition-colors"
+            >
+              Blog
+            </Link>
+
+            <Link
+              href="/contact"
+              onClick={closeMobileMenu}
+              className="py-3.5 border-b border-white/10 hover:text-white transition-colors"
+            >
+              Contact
+            </Link>
+
+            {/* Book a Repair Button & Social Icons */}
+            <div className="mt-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+              <Link
+                href="/book-repair"
+                onClick={closeMobileMenu}
+                className="w-full sm:w-auto sm:px-8 bg-[#facc15] text-black font-semibold text-center py-3 rounded-full hover:bg-yellow-400 transition-colors"
               >
-                <FaFacebookF />
-              </a>
-              <a
-                href="https://x.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-white transition-colors"
-                aria-label="X"
-              >
-                <FaXTwitter />
-              </a>
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-white transition-colors"
-                aria-label="Instagram"
-              >
-                <FaInstagram />
-              </a>
+                Book a Repair
+              </Link>
+
+              <div className="flex items-center justify-center gap-6 py-1 text-gray-300 text-lg">
+                <a
+                  href="https://facebook.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition-colors"
+                  aria-label="Facebook"
+                >
+                  <FaFacebookF />
+                </a>
+
+                <a
+                  href="https://x.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition-colors"
+                  aria-label="X"
+                >
+                  <FaXTwitter />
+                </a>
+
+                <a
+                  href="https://instagram.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition-colors"
+                  aria-label="Instagram"
+                >
+                  <FaInstagram />
+                </a>
+              </div>
             </div>
-          </div>
-        </Container>
+          </Container>
+        </div>
       </div>
 
       {/* Desktop Slide-over Drawer Menu */}
-      <NavDrawer
-        isOpen={isDrawerOpen}
-        onClose={() => setIsDrawerOpen(false)}
-      />
+      <NavDrawer isOpen={isDrawerOpen} onClose={() => setIsDrawerOpen(false)} />
     </nav>
   );
 };
