@@ -23,10 +23,11 @@ const ServiceCard = ({
         <div className="flex items-center justify-between mb-4">
           <div className="w-12 h-12 relative">
             <Image
-              src={imageSrc}
-              alt={title}
+              src="/images/BR1.png"
+              alt="Repair"
               fill
-              className="object-cover rounded"
+              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              className="object-cover"
             />
           </div>
 

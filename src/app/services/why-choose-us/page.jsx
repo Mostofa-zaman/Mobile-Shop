@@ -1,5 +1,5 @@
-import KeyFeatures from "@/components/whyChooseUs/KeyFeatures";
-import WhyChooseHero from "@/components/whyChooseUs/WhychooseHero";
+import KeyFeatures from "@/components/services/whyChooseUs/KeyFeatures";
+import WhyChooseHero from "@/components/services/whyChooseUs/WhychooseHero";
 
 
 export default function WhyChooseUsPage() {

@@ -11,7 +11,6 @@ export default function ScreenRepair () {
    <ServicesGrid/>
    <RepairCTA/>
 
-   {/* #f8f9fa */}
    </>
   );
 }

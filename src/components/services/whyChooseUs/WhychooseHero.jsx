@@ -1,7 +1,7 @@
-import Breadcrumb from "../common/Breadcrumb";
-import Container from "../common/Container";
-import SectionHeading from "../common/SectionHeading";
-import SectionTitle from "../common/SectionTitle";
+import Breadcrumb from "../../common/Breadcrumb";
+import Container from "../../common/Container";
+import SectionHeading from "../../common/SectionHeading";
+import SectionTitle from "../../common/SectionTitle";
 
 
 

@@ -232,7 +232,7 @@ const Navbar = () => {
                 </Link>
 
                 <Link
-                  href="/service/water-damage-repair"
+                  href="/services/why-choose-us"
                   onClick={closeMobileMenu}
                   className="py-1 hover:text-white transition-colors"
                 >
